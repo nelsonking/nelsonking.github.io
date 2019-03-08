@@ -120,10 +120,6 @@ console.log(myMammal.getName()) //Herb
 console.log(myMammal.says()) //Cheers!
 ```
 
-### 部件
-
-这一部分看的不是特别懂，我想等我学完ES2015中的类和模块部分后再看看吧。
-
 ## 数组
 
 ### 数组字面量
