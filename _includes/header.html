@@ -19,9 +19,9 @@
                     {% if my_page.type == 'page' %}
                     <li>
                         {% if my_page.url == page.url %}
-                            <a class="active" href="{{ my_page.url | prepend: site.baseurl }}?{{page.content | number_of_words}}">
+                            <a class="active" href="{{ my_page.url | prepend: site.baseurl }}?w={{page.content | number_of_words}}">
                         {% else %}
-                            <a href="{{ my_page.url | prepend: site.baseurl }}?{{page.content | number_of_words}}">
+                            <a href="{{ my_page.url | prepend: site.baseurl }}?w={{page.content | number_of_words}}">
                         {% endif %}
                             <i class="fa fa-{{my_page.icon}}"></i>{{ my_page.title }}
                         </a>
