@@ -8,7 +8,6 @@ tags: jekyll RubyGems
 * content
 {:toc}
 
-
 ## 搭建过程
 以Mac系统为例
 主要环节有：安装Ruby，安装RubyGems，安装jekyll，安装代码高亮插件，安装node.js
@@ -19,6 +18,10 @@ brew install ruby
 
 ruby -v
 ```
+
+
+
+
 得到ruby版本号，即安装成功
 
 ### 安装RubyGems

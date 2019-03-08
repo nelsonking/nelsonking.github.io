@@ -14,7 +14,6 @@ tags: JavaScript this
 
 例如：
 
-
 ```js
 console.log(this.document === document); //true
 console.log(this === window); //true
@@ -22,6 +21,9 @@ console.log(this === window); //true
 this.a = 91;
 console.log(window.a); //91
 ```
+
+
+
 
 ## 一般函数的 this
 

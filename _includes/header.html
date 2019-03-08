@@ -18,10 +18,15 @@
                 {% for my_page in site.pages %}
                     {% if my_page.type == 'page' %}
                     <li>
+                        {% assign w =  (page.content | number_of_words) %}
+                        {% assign t = (site.time | date: "%Y%m%d") %}
+                        {% assign v = t|append:w %}
+
+
                         {% if my_page.url == page.url %}
-                            <a class="active" href="{{ my_page.url | prepend: site.baseurl }}?w={{page.content | number_of_words}}">
+                            <a class="active" href="{{ my_page.url | prepend: site.baseurl }}?v={{v}}">
                         {% else %}
-                            <a href="{{ my_page.url | prepend: site.baseurl }}?w={{page.content | number_of_words}}">
+                            <a href="{{ my_page.url | prepend: site.baseurl }}?v={{v}}">
                         {% endif %}
                             <i class="fa fa-{{my_page.icon}}"></i>{{ my_page.title }}
                         </a>
