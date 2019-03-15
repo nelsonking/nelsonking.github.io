@@ -55,7 +55,7 @@ SSLProtocol all -SSLv2 -SSLv3
 SSLHonorCipherOrder on
 SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW:!RC4:
 ========================================================================
-< VirtualHost _default_:443 > 
+< VirtualHost _default_:443> 
     DocumentRoot "/data/web/project"
     Servername https://www.domain.com/
     ErrorLog logs/ssl_error_log
@@ -64,7 +64,7 @@ SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW:!RC4:
     SSLEngine on
     SSLCertificateFile /etc/httpd/conf/cert/*.crt
     SSLCertificateKeyFile /etc/httpd/conf/cert/*.key
-</ VirtualHost >
+</ VirtualHost>
 ```
 >> 虚拟主机配置，必须有一个虚拟主机，这样才可以使用跳转功能和使用443端口访问    
 
@@ -134,14 +134,13 @@ grep -R 'mod_proxy.so' /etc/httpd/
 ### 配置反向代理
 * /etc/httpd/conf/httpd.conf
 * /etc/httpd/conf.d/ssl.conf
-
 ```apache
 SSLProxyEngine on # https 是需要要添加
 ProxyRequests Off
-<Proxy *>
+< Proxy *>
     Order deny,allow
     Allow from all
-</Proxy>
+</ Proxy>
 ProxyPass /test/ http://127.0.0.1:8080/test/
 ProxyPassReverse /test/ http://127.0.0.1:8081/test/
 ```
