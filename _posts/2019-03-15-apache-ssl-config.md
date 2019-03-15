@@ -14,7 +14,7 @@ tags: apache ssl https
 - 所需扩展 ssl_module
 * 可以 /etc/httpd/modules/ 目录下确认 mod_ssl.so 是否存在
 
-### 开启配置
+* 开启配置
 ```bash
 LoadModule ssl_module         modules/mod_ssl.so
 Include conf/extra/httpd-ssl.conf
@@ -40,6 +40,7 @@ SSLCertificateFile /etc/httpd/cert/*.pem
 SSLCertificateKeyFile /etc/httpd/cert/*.key
 ```
 
+### 具体的配置如下
 ```bash
 LoadModule ssl_module modules/mod_ssl.so
 Listen 443
@@ -64,7 +65,6 @@ SSLEngine on
 SSLCertificateFile /etc/httpd/conf/cert/*.crt
 SSLCertificateKeyFile /etc/httpd/conf/cert/*.key
 </VirtualHost>
-
 ```
 
 
@@ -77,19 +77,20 @@ SSLCertificateKeyFile /etc/httpd/conf/cert/*.key
 ### 默认 http 转 https 
 /etc/httpd/conf/httpd.conf
 * 位置随意
+
 ```bash
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
-```
 
-```bash
+=================================================
+
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*) https://%{SERVER_NAME}/$1 [R,L]
-```
 
-```bash 
+=================================================
+
 RewriteEngine on
 RewriteCond %{SERVER_PORT} !^443$
 RewriteRule ^/?(.*)$ https://%{SERVER_NAME}/$1 [L,R]
@@ -102,19 +103,16 @@ service httpd restart
 systemctl restart httpd
 ```
 
-
-
 ### 问题整理
 * 重启apache,出现 Invalid command 'SSLPassPhraseDialog', perhaps misspelled or defined by a module not included in the server configuration
 
 执行 ./httpd -l 看看有没有mode_ssl.c，这个错误说明ssl模块安装没有成功。
 解决办法：
 
-1、重新编译apache，加上--enable-ssl --with-ssl参数
+* 重新编译apache，加上--enable-ssl --with-ssl参数
 
-2、把ssl模块加入到已经编译好的apache中
+* 把ssl模块加入到已经编译好的apache中
 首先，使用 whereis openssl 命令获取lib和include的路径
-
 ```bash
 [root@robot /usr/local/apache/modules]# whereis openssl
 openssl: /usr/bin/openssl /usr/lib/openssl /usr/include/openssl /usr/share/man/man1/openssl.1ssl.gz
@@ -145,7 +143,7 @@ grep -R 'mod_proxy.so' /etc/httpd/
 
 
 ### 配置反向代理
-#反向代理
+* 反向代理
 ```bash
 SSLProxyEngine on # https 是需要要添加
 ProxyRequests Off
