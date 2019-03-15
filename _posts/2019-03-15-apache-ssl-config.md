@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Apache 2.4.* https proxy"
+title:  "Apache 2.4.* 配置 https 和 proxy 反向代理"
 categories: apache 
 tags: apache ssl https
 ---
@@ -15,7 +15,7 @@ tags: apache ssl https
 * 可以 /etc/httpd/modules/ 目录下确认 mod_ssl.so 是否存在
 
 * 开启配置
-```bash
+```apache
 LoadModule ssl_module         modules/mod_ssl.so
 Include conf/extra/httpd-ssl.conf
 ```
@@ -23,11 +23,11 @@ Include conf/extra/httpd-ssl.conf
 
 
 
-### https配置位置
+### https配置
 * /etc/httpd/conf.d/ssl.conf
 
 - 实际仍然是 /etc/httpd/conf/httpd.conf 加载进来的配置文件
-```bash
+```apache
 # Supplemental configuration
 #
 # Load config files in the "/etc/httpd/conf.d" directory, if any.
@@ -35,13 +35,13 @@ IncludeOptional conf.d/*.conf
 ```
 
 * 对于apache 默认已经配置了https，我们只需要修改对应的主机的key文件（即新建的端口为443的VirtualHost）
-```bash
+```apache
 SSLCertificateFile /etc/httpd/cert/*.pem
 SSLCertificateKeyFile /etc/httpd/cert/*.key
 ```
 
-- 具体的配置如下
-```bash
+* 具体的配置如下
+```apache
 LoadModule ssl_module modules/mod_ssl.so
 Listen 443
 SSLPassPhraseDialog  builtin
@@ -54,34 +54,26 @@ SSLCryptoDevice builtin
 SSLProtocol all -SSLv2 -SSLv3
 SSLHonorCipherOrder on
 SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW:!RC4:
+========================================================================
+< VirtualHost _default_:443 > 
+    DocumentRoot "/data/web/project"
+    Servername https://www.domain.com/
+    ErrorLog logs/ssl_error_log
+    TransferLog logs/ssl_access_log
+    LogLevel warn
+    SSLEngine on
+    SSLCertificateFile /etc/httpd/conf/cert/*.crt
+    SSLCertificateKeyFile /etc/httpd/conf/cert/*.key
+</ VirtualHost >
 ```
-
-* 虚拟主机配置，必须有一个虚拟主机，这样才可以使用跳转功能和使用443端口访问
-```bash
-<VirtualHost _default_:443>     
-DocumentRoot "/data/web/project"
-Servername https://www.domain.com/
-ErrorLog logs/ssl_error_log
-TransferLog logs/ssl_access_log
-LogLevel warn
-SSLEngine on
-SSLCertificateFile /etc/httpd/conf/cert/*.crt
-SSLCertificateKeyFile /etc/httpd/conf/cert/*.key
-</VirtualHost>
-```
-
+>> 虚拟主机配置，必须有一个虚拟主机，这样才可以使用跳转功能和使用443端口访问    
 
 * 由于阿里云默认没有开启443端口，所有需要去网页面添加安全组规则
-阿里云控制台 -> 云服务器ECS -> 网络和安全 -> 安全组 -> 配置规则
-
-入方向 选择自定义TCP 填写 443 即可
-
+>> 阿里云控制台 -> 云服务器ECS -> 网络和安全 -> 安全组 -> 配置规则 (入方向 选择自定义TCP 填写 443 即可)
 
 ### 默认 http 转 https 
-/etc/httpd/conf/httpd.conf
-
-* 位置随意
-```bash
+* /etc/httpd/conf/httpd.conf
+```apache
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
@@ -103,18 +95,16 @@ systemctl restart httpd
 ```
 
 ### 问题整理
-* 重启apache,出现 Invalid command 'SSLPassPhraseDialog', perhaps misspelled or defined by a module not included in the server configuration
-
-执行 ./httpd -l 看看有没有mode_ssl.c，这个错误说明ssl模块安装没有成功。
+#### 重启apache,出现 Invalid command 'SSLPassPhraseDialog', perhaps misspelled or defined by a module not included in the server configuration
+* 执行 ./httpd -l 看看有没有mode_ssl.c，这个错误说明ssl模块安装没有成功。
 解决办法：
 
 * 重新编译apache，加上--enable-ssl --with-ssl参数
 
-* 把ssl模块加入到已经编译好的apache中
-首先，使用 whereis openssl 命令获取lib和include的路径
+* 把ssl模块加入到已经编译好的apache中 (获取lib和include的路径)
 ```bash
-[root@robot /usr/local/apache/modules]# whereis openssl
-openssl: /usr/bin/openssl /usr/lib/openssl /usr/include/openssl /usr/share/man/man1/openssl.1ssl.gz
+whereis openssl
+# openssl: /usr/bin/openssl /usr/lib/openssl /usr/include/openssl /usr/share/man/man1/openssl.1ssl.gz
 ```
 
 * 然后 在apache 源码的modules/ssl文件夹下，使用命令
@@ -142,8 +132,10 @@ grep -R 'mod_proxy.so' /etc/httpd/
 
 
 ### 配置反向代理
-* 反向代理
-```bash
+* /etc/httpd/conf/httpd.conf
+* /etc/httpd/conf.d/ssl.conf
+
+```apache
 SSLProxyEngine on # https 是需要要添加
 ProxyRequests Off
 <Proxy *>
@@ -156,4 +148,4 @@ ProxyPassReverse /test/ http://127.0.0.1:8081/test/
 
 ### 问题整理
 - Reason: DNS lookup failure for: 127.0.0.1:8080ranking
-* 反向代理代理的地址后面的反斜线，如果是有地址需要带到代理服务器上一定需要添加，否则地址会出错
+>> 反向代理代理的地址后面的反斜线，如果是有地址需要带到代理服务器上一定需要添加，否则地址会出错
