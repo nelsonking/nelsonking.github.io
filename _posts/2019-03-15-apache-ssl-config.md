@@ -24,9 +24,9 @@ Include conf/extra/httpd-ssl.conf
 
 
 ### https配置位置
-/etc/httpd/conf.d/ssl.conf
+* /etc/httpd/conf.d/ssl.conf
 
-* 实际仍然是 /etc/httpd/conf/httpd.conf 加载进来的配置文件
+- 实际仍然是 /etc/httpd/conf/httpd.conf 加载进来的配置文件
 ```bash
 # Supplemental configuration
 #
@@ -40,7 +40,7 @@ SSLCertificateFile /etc/httpd/cert/*.pem
 SSLCertificateKeyFile /etc/httpd/cert/*.key
 ```
 
-### 具体的配置如下
+- 具体的配置如下
 ```bash
 LoadModule ssl_module modules/mod_ssl.so
 Listen 443
@@ -54,8 +54,11 @@ SSLCryptoDevice builtin
 SSLProtocol all -SSLv2 -SSLv3
 SSLHonorCipherOrder on
 SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW:!RC4:
+```
 
-<VirtualHost _default_:443>     # 必须有一个虚拟主机，这样才可以使用跳转功能和使用443端口访问
+* 虚拟主机配置，必须有一个虚拟主机，这样才可以使用跳转功能和使用443端口访问
+```bash
+<VirtualHost _default_:443>     
 DocumentRoot "/data/web/project"
 Servername https://www.domain.com/
 ErrorLog logs/ssl_error_log
@@ -76,21 +79,17 @@ SSLCertificateKeyFile /etc/httpd/conf/cert/*.key
 
 ### 默认 http 转 https 
 /etc/httpd/conf/httpd.conf
-* 位置随意
 
+* 位置随意
 ```bash
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
-
 =================================================
-
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*) https://%{SERVER_NAME}/$1 [R,L]
-
 =================================================
-
 RewriteEngine on
 RewriteCond %{SERVER_PORT} !^443$
 RewriteRule ^/?(.*)$ https://%{SERVER_NAME}/$1 [L,R]
@@ -148,12 +147,13 @@ grep -R 'mod_proxy.so' /etc/httpd/
 SSLProxyEngine on # https 是需要要添加
 ProxyRequests Off
 <Proxy *>
-	Order deny,allow
-	Allow from all
+    Order deny,allow
+    Allow from all
 </Proxy>
 ProxyPass /test/ http://127.0.0.1:8080/test/
 ProxyPassReverse /test/ http://127.0.0.1:8081/test/
 ```
+
 ### 问题整理
 - Reason: DNS lookup failure for: 127.0.0.1:8080ranking
 * 反向代理代理的地址后面的反斜线，如果是有地址需要带到代理服务器上一定需要添加，否则地址会出错
