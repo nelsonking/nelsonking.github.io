@@ -37,8 +37,10 @@ IncludeOptional conf.d/*.conf
 * 对于apache 默认已经配置了https，我们只需要修改对应的主机的key文件（即新建的端口为443的VirtualHost）
 ```apache
 SSLCertificateFile /etc/httpd/cert/*.pem
+# 在Apache中重点就是SSLCertificateChainFile的配置，有没有都需要添加一个（服务器缺少中间证书问题类似）
+SSLCertificateChainFile /etc/httpd/cert/*.pem
 SSLCertificateKeyFile /etc/httpd/cert/*.key
-```
+ ```
 
 * 具体的配置如下
 ```apache
@@ -62,7 +64,8 @@ SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW:!RC4:
     TransferLog logs/ssl_access_log
     LogLevel warn
     SSLEngine on
-    SSLCertificateFile /etc/httpd/conf/cert/*.crt
+    SSLCertificateFile /etc/httpd/conf/cert/*.epm
+    SSLCertificateChainFile /etc/httpd/cert/*.pem
     SSLCertificateKeyFile /etc/httpd/conf/cert/*.key
 </ VirtualHost>
 ```
