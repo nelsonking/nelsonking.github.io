@@ -34,6 +34,10 @@ type: page
 ### 杂项
 - [logo制作](https://www.logosc.cn/)
 
+### 软件下载
+- [mac 软件][http://mac.orsoon.com]
+* [mac 软件][http://xclient.info]
+
 ### Chrome 插件
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 * [Chrome扩展及应用开发 -图灵电子书](http://www.ituring.com.cn/minibook/950)
