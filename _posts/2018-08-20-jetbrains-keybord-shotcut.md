@@ -17,6 +17,9 @@ tags: jetbrains phpstorm pycharm idea webstorm clion goland
 |格式化代码|ctrl+alt+l|
 |恢复重做（redo）|ctrl+shift+z|
 |跳转到某一行|ctrl+g|
+|跳到上次操作跳转的地方 |ctrl + alt + <- | 
+|跳到前一次操作跳转的地方 |ctrl + alt + -> |
+
 
 
 
