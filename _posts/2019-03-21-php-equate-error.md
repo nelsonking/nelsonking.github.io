@@ -2,7 +2,7 @@
 layout: post
 title:  "php 等式判断错误"
 categories: php
-tags: php 1990 等式判断
+tags: php 等式判断错误 微信回调
 ---
 
 * content
@@ -35,9 +35,7 @@ var_dump(19.90 * 100)
 var_dump(intval(19.90 * 100)) 
 
 // 输出 1989
-// 确定问题是 PHP在等号对比时的数据类型转发发生的问题
-// 也就是 浮点型 转化为 整形时发生了问题
-
+// 发生原因你看似有穷的小数, 在计算机的二进制表示里却是无穷的
 ```
 
 ### 处理办法
@@ -45,6 +43,8 @@ var_dump(intval(19.90 * 100))
 var_dump(1990 == intval(strval(19.90 * 100))
 // 输出 true
 ```
+
+
 
 
 
