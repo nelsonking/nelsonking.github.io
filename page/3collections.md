@@ -35,24 +35,27 @@ type: page
 - [logo制作](https://www.logosc.cn/)
 
 ### 软件下载
-- [mac 软件][http://mac.orsoon.com]
-* [mac 软件][http://xclient.info]
+- [mac 软件](http://mac.orsoon.com)
+* [mac 软件](http://xclient.info)
 
 ### Chrome 插件
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 * [Chrome扩展及应用开发 -图灵电子书](http://www.ituring.com.cn/minibook/950)
 * [有哪些鲜为人知却非常有意思、好用的 Chrome 扩展？ -知乎](https://www.zhihu.com/question/23228162#answer-28057391)
+
 ### 正则验证
 - [在线正则表达式匹配](https://regex101.com/)
 * [http://regexr.com/](http://regexr.com/)
 
 ### 生活助手
-[手机摄影星空](https://weibo.com/ttarticle/p/show?id=2309404334464300922082)
-[国外App下载](https://androidappsapk.co/download/com.pureimagination.perfectblend/fb7340dc38d02ceea67159a90a09e509/)
-[银行名 行号 查询](http://www.lianhanghao.com/index.php?bank=16&province=1&city=35&key=%E8%A5%BF%E7%9B%B4%E9%97%A8%E6%94%AF%E8%A1%8C)
-[smartgit 购买](https://www.syntevo.com/cn/smartgit/purchase/?updates=lifetime&distributed-reviews-addon=1&smart-synchronize=1)
+- [手机摄影星空](https://weibo.com/ttarticle/p/show?id=2309404334464300922082)
+* [国外App下载](https://androidappsapk.co/download/com.pureimagination.perfectblend/fb7340dc38d02ceea67159a90a09e509/)
+* [银行名 行号 查询](http://www.lianhanghao.com/index.php?bank=16&province=1&city=35&key=%E8%A5%BF%E7%9B%B4%E9%97%A8%E6%94%AF%E8%A1%8C)
+* [smartgit 购买](https://www.syntevo.com/cn/smartgit/purchase/?updates=lifetime&distributed-reviews-addon=1&smart-synchronize=1)
+
 ### eamcs 
-[markdown-mode](https://jblevins.org/projects/markdown-mode/)
+- [markdown-mode](https://jblevins.org/projects/markdown-mode/)
+
 ## 编程语言
 
 ### JavaScript
