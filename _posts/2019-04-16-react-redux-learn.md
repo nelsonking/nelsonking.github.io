@@ -17,6 +17,9 @@ state 是组件的内部状态
 
 proTypes 用来进行 prop 的参数检查
 
+
+
+
 ```bash
 object.propTypes = {
   name: PropTypes.string.isRequired,
