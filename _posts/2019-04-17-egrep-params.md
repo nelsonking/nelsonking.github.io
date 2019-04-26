@@ -15,9 +15,45 @@ grep 参数频率使用不高的总是忘记，备档，PS: egrep 用起来比 g
 
 
 ```bash
+-A NUM, --after-context=NUM
+      打印出紧随匹配的行之后的下文 NUM 行。在相邻的匹配组之间将会打印内容是 -- 的一行。
+
+-b, --byte-offset
+      在输出的每行前面同时打印出当前行在输入文件中的字节偏移量。
+
+-B NUM, --before-context=NUM
+      打印出匹配的行之前的上文 NUM 行。在相邻的匹配组之间将会打印内容是 -- 的一行。
+
+--colour[=WHEN], --color[=WHEN]
+      在匹配的行周围以 GREP_COLOR 环境变量中指定的记号来标记。WHEN 可以是 `never', `always', 或是 `auto'。
+
+-c, --count
+      禁止通常的输出；作为替代，为每一个输入文件打印一个匹配的行的总数。如果使用       -v,      --invert-match      选项(参见下面)，将是不匹配的行的总数。
+
+-C NUM, --context=NUM
+      打印出匹配的行的上下文前后各 NUM 行。在相邻的匹配组之间将会打印内容是 -- 的一行。
+
+-e PATTERN, --regexp=PATTERN
+      使用模式 PATTERN 作为模式；在保护以 - 为起始的模式时有用。
+
+-E, --extended-regexp 
+      将模式 PATTERN 作为一个扩展的正则表达式来解释 (参见下面)。
+
+-F, --fixed-strings
+      将模式 PATTERN 视为一个固定的字符串的列表，用新行 (newlines) 分隔，只要匹配其中之一即可。      
+
+-P, --perl-regexp
+      将模式 PATTERN 作为一个 Perl 正则表达式来解释。
+
+-H, --with-filename
+      为每个匹配打印文件名。
+
 -h, --no-filename
       当搜索多个文件时，禁止在输出的前面加上文件名前缀。
 
+-i, --ignore-case
+      忽略模式 PATTERN 和输入文件中的大小写的分别。
+      
 -n, --line-number
       在输出的每行前面加上它所在的文件中它的行号。      
 
