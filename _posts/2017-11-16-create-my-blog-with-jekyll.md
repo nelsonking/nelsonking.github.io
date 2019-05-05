@@ -37,6 +37,7 @@ ruby setup.rb
 
 ```bash
 gem install jekyll
+gem install jekyll-paginate
 jekyll -v 
 ```
 得到jekyll版本号，jekyll就已经安装完毕了
