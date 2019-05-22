@@ -36,8 +36,10 @@ type: page
 - [logo制作](https://www.logosc.cn/)
 
 ### 软件下载
-- [mac 软件](http://mac.orsoon.com)
-* [mac 软件](http://xclient.info)
+- [mac orsoon](http://mac.orsoon.com)
+* [mac xclient](http://xclient.info)
+* [android androidappsapk](https://androidappsapk.co/download/com.pureimagination.perfectblend/fb7340dc38d02ceea67159a90a09e509/)
+* [android apkpure](https://apkpure.com/)
 
 ### Chrome 插件
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
@@ -50,7 +52,6 @@ type: page
 
 ### 生活助手
 - [手机摄影星空](https://weibo.com/ttarticle/p/show?id=2309404334464300922082)
-* [国外App下载](https://androidappsapk.co/download/com.pureimagination.perfectblend/fb7340dc38d02ceea67159a90a09e509/)
 * [银行名 行号 查询](http://www.lianhanghao.com/index.php?bank=16&province=1&city=35&key=%E8%A5%BF%E7%9B%B4%E9%97%A8%E6%94%AF%E8%A1%8C)
 * [smartgit 购买](https://www.syntevo.com/cn/smartgit/purchase/?updates=lifetime&distributed-reviews-addon=1&smart-synchronize=1)
 
