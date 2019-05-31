@@ -43,6 +43,17 @@ type: page
 * [android androidappsapk](https://androidappsapk.co/download/com.pureimagination.perfectblend/fb7340dc38d02ceea67159a90a09e509/)
 * [android apkpure](https://apkpure.com/)
 
+### 视频网站
+- [强大的种子搜索](http://bt.xiandan.in/)
+* [聚合索引种子搜索](https://cilijuhe.com/)
+* [838888](https://868888.net)
+* [磁力维基](https://www.ciliwiki.com)
+* [SkrBt](http://www.skrbt.world)
+* [BT 猫](http://btcat.me)
+* [广告较多 较稳定 请勿在人多场景打开](http://btkitty.pet)
+* [广告较多 较稳定 请勿在人多场景打开](https://btso.pw/search)
+* [配合连接下载资源](https://pan.bitqiu.com/index)
+
 ### Chrome 插件
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 * [Chrome扩展及应用开发 -图灵电子书](http://www.ituring.com.cn/minibook/950)
@@ -60,9 +71,17 @@ type: page
 ### eamcs 
 - [markdown-mode](https://jblevins.org/projects/markdown-mode/)
 
-## 编程语言
+# 编程语言
 
-### JavaScript
+## php
+
+### Laravel
+- [laravel APi 文档查询](https://laravel.com/api/5.5/index.html)
+
+
+
+
+## JavaScript
 - [JavaScript 标准参考教程（alpha） -阮一峰](http://javascript.ruanyifeng.com/)
 * [JavaScript Promise迷你书 -azu](http://liubin.org/promises-book/)
 * [YOU MIGHT NOT NEED JQUERY PLUGINS](http://youmightnotneedjqueryplugins.com/)
@@ -80,9 +99,6 @@ type: page
 
 ## 文档
 - [浏览器文档-火狐出品](https://developer.mozilla.org/zh-CN/docs/Web/API/Document)
-
-
-## 框架&脚手架
 
 ### webpack
 - [Webpack 中文指南 -赵达](https://www.gitbook.com/book/zhaoda/webpack/details)
@@ -102,8 +118,6 @@ type: page
 * [AngularJS api 官网](https://docs.angularjs.org/api)
 * [AngularJS入门教程——AngularJS中文社区提供](https://github.com/zensh/AngularjsTutorial_cn)
 * [AngularJS 教程 \| 菜鸟教程](http://www.runoob.com/angularjs/angularjs-tutorial.html)
-
-
 
 
 ## 模块化

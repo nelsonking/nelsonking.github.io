@@ -39,10 +39,10 @@ class Country extends Model
         return $this->hasManyThrough(
             'App\Post',    // related        远程关联的表
             'App\User',    // through        中间表
-            'country_id',  // firstKey       当前表 和 中间表 关联关系 取 中间表的键
-            'user_id',     // secondKey      中间表 和 远程表 关联关系 取 远程表的键
-            'id',          // localKey       当前表 和 中间表 关联关系 取 当前表的键
-            'id'           // secondLocalKey 中间表 和 远程表 关联关系 取 中间表的键
+            'country_id',  // firstKey       当前表 和 中间表 的关联关系 取 中间表的键
+            'user_id',     // secondKey      中间表 和 远程表 的关联关系 取 远程表的键
+            'id',          // localKey       当前表 和 中间表 的关联关系 取 当前表的键
+            'id'           // secondLocalKey 中间表 和 远程表 的关联关系 取 中间表的键
         );
     }
 }
