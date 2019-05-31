@@ -2,7 +2,7 @@
 layout: post
 title:  "jetbrains 功能记录"
 categories: jetbrains
-tags: jetbrains phpstorm pycharm idea webstorm clion goland
+tags: jetbrains phpstorm pycharm idea webstorm clion goland 持续更新
 ---
 
 * content

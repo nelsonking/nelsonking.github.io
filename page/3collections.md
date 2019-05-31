@@ -17,6 +17,8 @@ type: page
 * [渐变生成器 Ultimate CSS Gradient Generator](http://www.colorzilla.com/gradient-editor/)
 * [CSS3 生成器 CSS Generators -CSSREFLEX](http://www.cssreflex.com/css-generators/)
 * [用于压缩 png 或 jpg 的在线工具 tiny png](https://tinypng.com/)
+* [安卓 微信 QQ 客户端 清理网站缓存](http://debugx5.qq.com/)
+
 ### 图床
 - [图床 有 API 可用 sm.ms/](https://sm.ms/)
 * [新浪微博图床 Chrome扩展](https://github.com/Suxiaogang/WeiboPicBed)

@@ -2,7 +2,7 @@
 layout: post
 title:  "laravel 发布问题记录"
 categories: laravel
-tags: laravel
+tags: laravel 持续更新
 ---
 
 * content
