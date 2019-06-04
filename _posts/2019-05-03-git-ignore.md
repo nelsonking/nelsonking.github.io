@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "git"
+title:  "git ignore"
 categories: git
 tags: git
 ---
 
 * content
 {:toc}
-### git 使用记录
+### git 忽略文件
 Git忽略文件的原则
 -  忽略操作系统自动生成的文件，比如缩略图等；
 -  忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；

@@ -41,4 +41,15 @@ tags: jetbrains phpstorm pycharm idea webstorm clion goland 持续更新
 > (Do not align 不设置对其， On colon 冒号对其， On value 值对其)
 
 
+## 杂项
+### 忽略索引文件
+庞大 node_modules 直接让你的电脑起飞，专业的编辑器干专业的事
+ 
+#### 方法 1
+右键左侧目录树 -> Mark Directory As -> Excluded
 
+#### 方法 2 
+菜单 -> Directories -> Excluded -> 添加忽略目录
+
+#### 方法 3
+菜单 -> Editor -> File Types -> Ignore files and Folders -> 添加忽略目录

@@ -83,3 +83,46 @@ return Socialite::with('weixinweb')->redirect();
 > 
 * 微信客户端登录使用的公众平台
 * 网页扫码登录使用的是开放平台
+
+
+### 接口跨域请求
+```php
+composer require barryvdh/laravel-cors
+
+# config/app.php
+BarryvdhCorsServiceProvider::class,
+
+# use 
+# app/Http/Kernel.php $middleware
+
+protected $middleware = [
+    // ...
+    BarryvdhCorsHandleCors::class,
+];
+
+# config 
+php artisan vendor:publish --provider="BarryvdhCorsServiceProvider"
+
+# config/cors.php
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Laravel CORS
+    |--------------------------------------------------------------------------
+    |
+    | allowedOrigins, allowedHeaders and allowedMethods can be set to array('*')
+    | to accept any value.
+    |
+    */
+
+    'supportsCredentials' => false,
+    'allowedOrigins' => ['*'],
+    'allowedOriginsPatterns' => [],
+    'allowedHeaders' => ['*'],
+    'allowedMethods' => ['*'],
+    'exposedHeaders' => [],
+    'maxAge' => 0,
+];
+# 根据实际需求配置请求域名
+```
