@@ -53,3 +53,14 @@ tags: jetbrains phpstorm pycharm idea webstorm clion goland 持续更新
 
 #### 方法 3
 菜单 -> Editor -> File Types -> Ignore files and Folders -> 添加忽略目录
+
+
+## 优化
+### 卡顿问题
+```js
+phpstorm.exe.vmoptions
+
+-Dawt.usesystemAAFontSettings=lcd 
+-Dawt.java2d.opengl=true 
+```
+* phpstorm 默认的 JAVA 环境没有利用机器的硬件加速技术去实现实时渲染.而只要在 JAVA 环境中让系统默认使用硬件加速，就可以解决占用系统资源过大，让 phpstorm 卡的问题了

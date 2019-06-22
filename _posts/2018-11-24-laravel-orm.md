@@ -9,10 +9,7 @@ tags: laravel orm
 {:toc}
 
 ## laravel ORM 关系记录
-
-
-### hasManyThrough
-表结构如下
+### 假想一个表结构
 ```
 countries
     id - integer
@@ -29,6 +26,40 @@ posts
     title - string
 ```    
 
+
+
+### with
+渴求式加载,缓解了1+N的查询问题，仅需1+1次查询就能解决问题，对查询速度有了质的提升。
+
+
+### has
+基于关联关系去过滤模型的查询结果，所以它的作用和where条件非常相似。至少存在一个关联关系才能被查询出来。
+* 你还可以使用”.“来构造嵌套has语句。
+```php
+Country::has('users.posts').get();
+```
+
+### whereHas
+方法的原理基本和has()方法相同，但是他允许你自己添加对这个模型的过滤条件。
+```php
+Country::whereHas('users', function($query){
+	$query->wehre('name','like','%'.xxx.'%')
+}).get();
+``` 
+
+### withCount
+* 5.3 版本后
+* 顾名思义可以统计关联模型的数量
+```php
+Country::withCount('users'); // 统计总数
+Country::withCount(['users' => function($query){
+	$query->where('name','like','%'.xxx.'%')
+}]); // 按需统计
+
+```
+
+
+### hasManyThrough
 * 目的获取城市下的文章 
 
 ```php
