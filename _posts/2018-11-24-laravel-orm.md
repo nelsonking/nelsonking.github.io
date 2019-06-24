@@ -30,6 +30,16 @@ posts
 
 ### with
 渴求式加载,缓解了1+N的查询问题，仅需1+1次查询就能解决问题，对查询速度有了质的提升。
+```php
+// 加载多个关联
+User::with(['country','posts'])->get();
+
+// 嵌套预加载
+Country::with('user.post')->get();
+
+// 预加载指定列
+User::with('post:id,title')->get();
+```
 
 
 ### has
