@@ -9,7 +9,7 @@ tags: laravel orm
 {:toc}
 
 ## laravel ORM 关系记录
-### 假想一个表结构
+### 表结构
 ```
 countries
     id - integer
@@ -24,6 +24,10 @@ posts
     id - integer
     user_id - integer
     title - string
+    
+user_posts
+	user_id
+	posts_id    
 ```    
 
 
@@ -92,3 +96,18 @@ class Country extends Model
 * 关联关系摘自 https://learnku.com/docs/laravel/5.8/eloquent-relationships/3932#has-many-through
 * 由于localKey 和 secondLocalKey 在不同的表模型中可能会存在多种键，所以补充了关联关系，方便记忆
 * 当前 -> 中间 -> 远程  （两个关系处理两次共计4个参数）
+
+
+### 关联模型添加/更新
+```php
+// 添加关联
+attch
+$userObj->posts()->attach($postsObj)
+$userObj->posts()->attach([$posts_id, $posts_id_2])
+$userObj->posts()->save($postsObj) // save 只支持 对象形式
+
+// 同步关联
+sync
+$userObj->posts()->sync($postsObj)
+$userObj->posts()->sync([$posts_id, $posts_id_2])
+```
