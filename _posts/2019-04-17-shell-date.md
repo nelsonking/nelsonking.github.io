@@ -6,6 +6,7 @@ tags: shell date
 ---
 
 * content
+{:toc}
 ### date
 选项说明：
 　　-d ,--date=
