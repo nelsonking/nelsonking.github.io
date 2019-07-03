@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "grep 参数记录"
+title:  "shell-grep 参数记录"
 categories: grep
-tags: grep
+tags: shell grep
 ---
 
 * content
