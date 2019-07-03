@@ -6,13 +6,9 @@ tags: shell date
 ---
 
 * content
-## shell 常用命令归档整理
-
 ### date
 选项说明：
-
 　　-d ,--date=
-
 
 
 
