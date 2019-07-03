@@ -2,7 +2,7 @@
 layout: post
 title:  "shell—date"
 categories: shell
-tags: shell 
+tags: shell date
 ---
 
 * content
@@ -12,6 +12,10 @@ tags: shell
 选项说明：
 
 　　-d ,--date=
+
+
+
+
  
 #### 日期格式化参数
 ```
@@ -62,9 +66,6 @@ tags: shell
 %Z          按字母表排序的时区缩写 (例如，EDT) 
 
 ```
-
-
-
 
 #### 使用示例
 ```shell

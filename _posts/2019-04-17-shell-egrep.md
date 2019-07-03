@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "shell-grep 参数记录"
+title:  "shell-grep"
 categories: grep
 tags: shell grep
 ---
