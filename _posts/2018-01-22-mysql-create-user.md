@@ -27,4 +27,7 @@ CREATE USER 'pig'@'%' IDENTIFIED BY '123456';
 CREATE USER 'pig'@'%' IDENTIFIED BY ''; 
 CREATE USER 'pig'@'%';
 create user admin IDENTIFIED by 'admin'
+ALTER USER 'ROOT'@'LOCALHOST' INDENTIFIED BY '123456'
 ```
+
+
