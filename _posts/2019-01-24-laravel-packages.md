@@ -10,6 +10,9 @@ tags: laravel 持续更新
 
 ## laravel 实用扩展包，持续更新
 
+### 推荐实用阿里云镜像，每五秒更新一次
+* [http://mirrors.aliyun.com/composer/](http://mirrors.aliyun.com/composer/)
+
 ### socialiteproviders/manager
 - 社交媒体登录认证提供者，通过该扩展包可以实现 微博、微信、QQ ... 的第三方登录
 * [github 地址 ](https://github.com/SocialiteProviders)

@@ -8,6 +8,8 @@ tags: jetbrains phpstorm pycharm idea webstorm clion goland 持续更新
 * content
 {:toc}
 
+* [phpstorm文档](https://www.kancloud.cn/ervinhua/phpstorm/441837)
+
 ## 快捷键
 ### 编辑功能
 >
