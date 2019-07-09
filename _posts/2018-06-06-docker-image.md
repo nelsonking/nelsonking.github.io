@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "docker 镜像记录"
-categories: mysql
-tags: mysql
+categories: docker
+tags: docker
 ---
 
 * content
