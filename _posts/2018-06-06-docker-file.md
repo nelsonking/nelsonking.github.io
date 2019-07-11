@@ -220,6 +220,7 @@ ENTRYPOINT ["/bin/bash"]
 ```
 
 * dockerFile nginx
+
 ```shell
 FROM centos:7
 MAINTAINER xxx xxx@sina.com
