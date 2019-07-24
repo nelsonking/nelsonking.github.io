@@ -47,14 +47,14 @@ MAINTAINER nelson "xxxx@gmail.com"
 
 说明：RUN命令是一个常用的命令，执行完成之后会成为一个新的镜像，这里也是指镜像的分层构建。
 * 一句RUN就是一层，也相当于一个版本。
-* 你如果第一句安装了软件，用完在后面一句删除是不可能的。所以这种情况要在一句 RUN 命令中完成，可以通过&符号连接多个RUN语句。
+* 你如果第一句安装了软件，用完在后面一句删除是不可能的。所以这种情况要在一句 RUN 命令中完成，可以通过 && 符号连接多个RUN语句。
 * > docker是镜像层是只读
 * RUN后面的必须是 双引号 不能是 单引号（可以没引号），command 是不会调用shell的，所以也不会继承相应变量，要查看输入RUN "sh" "-c" "echo" "$HOME"，而不是RUN "echo" "$HOME"。
 
 用例：
 ```shell 
-RUN echo 'hello docker!' \
-        > /usr/local/file.txt
+RUN mkdir ~/docker_test \ 
+	&& echo 'hello docker!' > ~/docker_test/file.txt
 ```        
 * 使用 \ 来换行
          

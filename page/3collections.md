@@ -11,6 +11,12 @@ type: page
         
 ## 工具
 
+### 生活助手
+- [密码保管](https://app.keeweb.info/)
+* [手机摄影星空](https://weibo.com/ttarticle/p/show?id=2309404334464300922082)
+* [银行名 行号 查询](http://www.lianhanghao.com/index.php?bank=16&province=1&city=35&key=%E8%A5%BF%E7%9B%B4%E9%97%A8%E6%94%AF%E8%A1%8C)
+
+
 ### 前端工具
 - [生成 box-shadow 的工具 box-shadow generator](http://www.cssmatic.com/box-shadow)
 * [渐变生成器 gradient-generator](http://www.cssmatic.com/gradient-generator)
@@ -64,11 +70,6 @@ type: page
 * [http://regexr.com/](http://regexr.com/)
 * [图形正则解析](https://jex.im/regulex/)
 * [图形正则解析](https://regexper.com/)
-
-### 生活助手
-- [手机摄影星空](https://weibo.com/ttarticle/p/show?id=2309404334464300922082)
-* [银行名 行号 查询](http://www.lianhanghao.com/index.php?bank=16&province=1&city=35&key=%E8%A5%BF%E7%9B%B4%E9%97%A8%E6%94%AF%E8%A1%8C)
-* [smartgit 购买](https://www.syntevo.com/cn/smartgit/purchase/?updates=lifetime&distributed-reviews-addon=1&smart-synchronize=1)
 
 ### eamcs 
 - [markdown-mode](https://jblevins.org/projects/markdown-mode/)
