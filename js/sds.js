@@ -33,11 +33,11 @@ $(function(){
         let suggest = "";
 
         if (score < 50) {
-            suggest = "<span style='color:green'>您的生活愉快，没有抑郁的烦恼，请继续保持 (*^▽^*)</span>";
+            suggest = "<span style='color:#2ab303'>您的生活很愉快，没有抑郁的烦恼，请继续保持。</span>";
         } else if (score > 50 && score < 60) {
-            suggest = "<span style='color:yellow'>您有轻微的抑郁表象，需要引起注意！</span>";
+            suggest = "<span style='color:#a921f5'>您有轻微的抑郁表象，需要引起注意！</span>";
         } else {
-            suggest = "<span style='color:red'>您的情况较为严重! 应该及时拜访心理医生，进行治疗。</span>";
+            suggest = "<span style='color:#ff0112'>您的情况较为严重! 请及时拜访心理医生，进行治疗。</span>";
         }
 
         $("#suggest").html(suggest);
