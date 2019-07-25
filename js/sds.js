@@ -1,4 +1,8 @@
 $(function(){
+    // 渲染试题
+    let str = _.template($("#question_template").html(),{variable: 'data'})(questions);
+    $("#questions").html(str);
+
     $("#check").click(function () {
         let score = 0;
         let allDO = true;
