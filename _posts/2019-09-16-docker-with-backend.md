@@ -24,6 +24,9 @@ redis/   # redis 的配置文件和持久化文件
 source/  # 安装源文件 这里统一放到百度云地址为  https://pan.baidu.com/s/1VNa0FWvl-CjMLyzZt_jUpg  提取码: remq 
    ```
 
+
+
+
 * 其中配置文件已经归入版本控制，数据库文件等 容器运行产生的文件全部忽略
 
 ##  开启安装
