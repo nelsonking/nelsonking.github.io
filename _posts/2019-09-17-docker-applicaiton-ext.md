@@ -17,7 +17,8 @@ tags: docker 容器应用安装扩展
 
 ### 如何安装 
 比如我们要安装php的扩展，镜像内已经提供了一些安装扩展的方法。如下。
-```php
+
+```bash
 ## PHP Core Extensions
 FROM php:7.2-fpm
 RUN apt-get update && apt-get install -y \
@@ -29,7 +30,8 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-install -j$(nproc) gd
 ```
 * 通过这段我们知道如果安装 gd 扩展，并知道如何重新编译 php，提取代码如下
-```php
+
+```bash
 docker exec -it php bash
 
 apt update                                                         #更新软件源
@@ -41,7 +43,8 @@ docker-php-ext-install gd                                          #编译安装
 ```
 
 * 同上我们去安装 pdo & zip 扩展
-```php
+
+```bash
 docker exec -it php bash
 
 /usr/src/php/ext/
@@ -54,7 +57,8 @@ docker-php-ext-install pdo pdo_mysql
 ```
 
 * 安装debug & redis 扩展
-```php
+
+```bash
 FROM php:7.2-cli
 RUN pecl install redis-4.0.1 \
 	&& pecl install xdebug-2.6.0 \

@@ -26,9 +26,9 @@ ruby -v
 
 ### 安装RubyGems
 ```bash
-wet http://rubygems.org/pages/download/rubygems-2.4.5.zip
-unzip rubygems-2.4.5.zip
-cd rubygems-2.4.5
+wget https://rubygems.org/rubygems/rubygems-3.0.6.zip
+unzip rubygems-3.0.6.zip
+cd rubygems-3.0.6
 ruby setup.rb
 ```
 安装完毕后会得到 gem 命令
