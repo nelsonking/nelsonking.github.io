@@ -45,7 +45,10 @@ docker-php-ext-install gd                                          #编译安装
 * 同上我们去安装 pdo & zip 扩展
 
 ```bash
-docker exec -it php bash
+docker exec --user root -it php bash
+
+apt update
+apt install libzip-dev 
 
 /usr/src/php/ext/
 wget http://pecl.php.net/get/zip-1.13.5.tgz
