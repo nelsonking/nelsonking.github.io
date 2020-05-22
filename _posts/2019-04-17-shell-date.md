@@ -2,7 +2,7 @@
 layout: post
 title:  "shell—date"
 categories: shell
-tags: shell date
+tags: shell date linux
 ---
 
 * content
