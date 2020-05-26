@@ -21,6 +21,7 @@ rewrite ^good.html\?(\d+)$ /good/$1 redirect
  
 
 
+
 ### 修改版本
 ```bash
 rewrite ^good.html /good/$1 redirect

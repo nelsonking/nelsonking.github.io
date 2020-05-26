@@ -18,6 +18,9 @@ wget http://www.ijg.org/files/jpegsrc.v8c.tar.gz
 ```
 
 
+
+
+
 ### MAC 编译参数
 ```shell
 ./configure --prefix=/usr/local/php7.1.27 --with-config-file-path=/usr/local/php7.1.27/etc --with-config-file-scan-dir=/usr/local/php7.1.27/etc/conf.d --without-ldap --enable-inline-optimization --disable-debug --disable-rpath --enable-shared --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-gettext -enable-mbstring --with-mhash --with-openssl=/usr/local/Cellar/openssl/1.0.2n --enable-bcmath --enable-soap --with-libxml-dir --enable-pcntl --enable-shmop --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-sockets --with-curl --with-zlib --enable-zip --with-bz2 --with-gd  --with-jpeg-dir --enable-gd-native-ttf --enable-gd-jis-conv --with-openssl=/usr/local/Cellar/openssl/1.0.2r/ --with-gettext=/usr/local/Cellar/gettext/0.19.8.1/ --with-iconv-dir=/usr/local/libiconv 

@@ -30,6 +30,11 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON `database_name`.* TO 'user_name'@'192.16
 flush privileges;//刷新系统权限表
 ```
 
+
+
+
+
+
 ## 撤销用户权限
 ```bash
 命令: REVOKE privilege ON databasename.tablename FROM 'username'@'host';

@@ -18,7 +18,7 @@ composer require predis/predis
 
 
 
-# 不同模式的配置
+## 不同模式的配置
 ```bash
 config/database.php
 
@@ -46,7 +46,7 @@ config/database.php
 * client 为 phpredis 或者 predis
 
 
-# 集群配置
+## 集群配置
 * 在 Redis 配置文件中使用 clusters 键来定义这些集群
 ```bash
 config/database.php

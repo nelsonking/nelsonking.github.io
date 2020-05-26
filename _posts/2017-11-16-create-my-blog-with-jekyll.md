@@ -13,11 +13,13 @@ tags: jekyll RubyGems
 主要环节有：安装Ruby，安装RubyGems，安装jekyll，安装代码高亮插件，安装node.js
 
 ### 安装Ruby
+
 ```bash
 brew install ruby
 
 ruby -v
 ```
+
 
 
 

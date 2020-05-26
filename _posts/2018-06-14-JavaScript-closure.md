@@ -31,7 +31,6 @@ tags: JavaScript 闭包
 
 对于第二个函数，`localVal` 是不能被释放的。因为调用 `outer2()` 后，返回的是匿名函数，匿名函数可以访问外部的 `outer2()` 中的局部变量，并返回了这个局部变量 localVal。当 `outer2()` 赋值给 `func` 后，再次调用 `func()`，仍能访问到局部变量 `localVal`。这种情况就是闭包。
 
----
 
 
 
