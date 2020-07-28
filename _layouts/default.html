@@ -14,6 +14,7 @@
 
     <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
     <script src="{{ " /js/smooth-scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <script src="{{ " /js/L2Dwidget.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
 
     <script type="text/javascript">
       smoothScroll.init({
@@ -21,6 +22,28 @@
         easing: 'easeInOutCubic', // Easing pattern to use
         offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
       });
+
+    L2Dwidget.init({
+        "model": {
+            jsonPath: "/js/tororo.model.json",
+            "scale": 1
+        },
+        "display": {
+            "position": "right",
+            "width": 150,
+            "height": 300,
+            "hOffset": 0,
+            "vOffset": -20
+        },
+        "mobile": {
+            "show": true,
+            "scale": 0.5
+        },
+        "react": {
+            "opacityDefault": 0.7,
+            "opacityOnHover": 0.2
+        }
+    })
     </script>
 
   </body>
