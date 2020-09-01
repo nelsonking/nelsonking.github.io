@@ -15,6 +15,9 @@ grep 参数频率使用不高的总是忘记，备档，PS: egrep 用起来比 g
 
 
 ```bash
+-a, --text              
+      equivalent to --binary-files=text
+
 -A NUM, --after-context=NUM
       打印出紧随匹配的行之后的下文 NUM 行。在相邻的匹配组之间将会打印内容是 -- 的一行。
 
@@ -33,6 +36,12 @@ grep 参数频率使用不高的总是忘记，备档，PS: egrep 用起来比 g
 -C NUM, --context=NUM
       打印出匹配的行的上下文前后各 NUM 行。在相邻的匹配组之间将会打印内容是 -- 的一行。
 
+-d, --directories=ACTION  
+    how to handle directories; ACTION is 'read', 'recurse', or 'skip'
+
+-D, --devices=ACTION      
+    how to handle devices, FIFOs and sockets; ACTION is 'read' or 'skip'
+
 -e PATTERN, --regexp=PATTERN
       使用模式 PATTERN 作为模式；在保护以 - 为起始的模式时有用。
 
@@ -40,7 +49,10 @@ grep 参数频率使用不高的总是忘记，备档，PS: egrep 用起来比 g
       将模式 PATTERN 作为一个扩展的正则表达式来解释 (参见下面)。
 
 -F, --fixed-strings
-      将模式 PATTERN 视为一个固定的字符串的列表，用新行 (newlines) 分隔，只要匹配其中之一即可。      
+      将模式 PATTERN 视为一个固定的字符串的列表，用新行 (newlines) 分隔，只要匹配其中之一即可。
+      
+-G, --basic-regexp        
+    PATTERN 是一个基本正则表达式(缩写为 BRE)
 
 -P, --perl-regexp
       将模式 PATTERN 作为一个 Perl 正则表达式来解释。
@@ -53,15 +65,37 @@ grep 参数频率使用不高的总是忘记，备档，PS: egrep 用起来比 g
 
 -i, --ignore-case
       忽略模式 PATTERN 和输入文件中的大小写的分别。
-      
+
+-I                        
+      equivalent to --binary-files=without-match
+
+-m, --max-count=NUM      
+      NUM 次匹配后停止      
+
 -n, --line-number
       在输出的每行前面加上它所在的文件中它的行号。      
 
 -o, --only-matching
       只显示匹配的行中与 PATTERN 相匹配的部分。
 
+-q, --quiet, --silent     
+      suppress all normal output
+    --binary-files=TYPE   
+      assume that binary files are TYPE; TYPE is 'binary', 'text', or 'without-match'
+
 -R, -r, --recursive
       递归地读每一目录下的所有文件。这样做和 -d recurse 选项等价。
+
+-s, --no-messages         
+      suppress error messages
+-T, --initial-tab         
+      make tabs line up (if needed)
+
+-L, --files-without-match 
+      print only names of FILEs containing no match
+
+-l, --files-with-matches  
+      print only names of FILEs containing matches
 
 --include=PATTERN
       仅仅在搜索匹配 PATTERN 的文件时在目录中递归搜索。
@@ -69,8 +103,17 @@ grep 参数频率使用不高的总是忘记，备档，PS: egrep 用起来比 g
 --exclude=PATTERN
       在目录中递归搜索，但是跳过匹配 PATTERN 的文件。
 
+-U, --binary             
+      do not strip CR characters at EOL (MSDOS/Windows)
+
+-u, --unix-byte-offsets  
+      report offsets as if CRs were not there (MSDOS/Windows)
+
 -v, --invert-match
       改变匹配的意义，只选择不匹配的行。
+
+-V, --version             
+      display version information and exit
 
 -w, --word-regexp
       只选择含有能组成完整的词的匹配的行。判断方法是匹配的子字符串必须是一行的开始，或者是在一个不可能是词的组成的字符之后。与此相似，
@@ -78,6 +121,9 @@ grep 参数频率使用不高的总是忘记，备档，PS: egrep 用起来比 g
 
 -x, --line-regexp
        只选择能匹配完整一行的匹配。
+
+-z, --null-data          
+        一个 0 字节的数据行，但不是空行
 ```
 
 
