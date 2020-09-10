@@ -1,6 +1,23 @@
 {
-  "private": true,
+  "name": "nelsonking.github.io",
+  "version": "1.0.0",
+  "description": "**My Blog Url: [www.nelsonking.cn](http://www.nelsonking.cn/)**",
+  "main": "index.js",
+  "dependencies": {
+    "live2d-widget-model-z16": "^1.0.5"
+  },
+  "devDependencies": {},
   "scripts": {
     "dev": "jekyll serve --watch"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelsonking/nelsonking.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonking/nelsonking.github.io/issues"
+  },
+  "homepage": "https://github.com/nelsonking/nelsonking.github.io#readme"
 }
