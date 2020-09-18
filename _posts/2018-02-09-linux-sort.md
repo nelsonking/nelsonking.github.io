@@ -20,6 +20,7 @@ sort [-bcdfimMnr][-o<输出文件>][-t<分隔字符>][+<起始栏位>-<结束栏
 -d 排序时，处理英文字母、数字及空格字符外，忽略其他的字符。
 -f 排序时，将小写字母视为大写字母。
 -i 排序时，除了040至176之间的ASCII字符外，忽略其他的字符。
+-k 指定按照第几列排序
 -m 将几个排序好的文件进行合并。
 -M 将前面3个字母依照月份的缩写进行排序。
 -n 依照数值的大小排序。
@@ -45,6 +46,19 @@ du -ah --max-depth=1 | sort -n | tail // 获取后10个
 # 因为sort 只能排序相同单位，所以，可以先去顶目标单位 比如查找 G单位
 du -ah --max-depth=1 | grep 'G' | sort -n | tail 
 # 查找G为单位排序 
+
+
+# 找出系统内存占用较高的进程
+ps -aux | sort -rnk 4 | head -20
+
+# 找出CPU占用较高的进程
+ps -aux | sort -rnk 3 | head -20
+
+# chakan TCP /IP协议族 连接状态
+netstat -nat |awk '{print $6}'|sort|uniq -c|sort -rn
+
+# 查找80端口占用最高的IP
+netstat -anlp|grep 80|grep tcp|awk '{print $5}'|awk -F: '{print $1}'|sort|uniq -c|sort -nr|head -n20`
 ```
 
 
