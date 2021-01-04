@@ -34,14 +34,17 @@ tags: jetbrains phpstorm pycharm idea webstorm clion goland 持续更新
 
 
 ## 编辑
-### 对其
-* typescript 设置等号对其
+### 对齐
+* 设置等号对齐
 > Code Style -> Typescript -> Wrapping and Braces 
-> 找到要设置的模板(例如设置对象) Objects -> Align
+> Objects -> Align
 
 > 右侧的是一个选项卡，可以选择设置内容 
 > (Do not align 不设置对其， On colon 冒号对其， On value 值对其)
 
+* 设置注释对齐
+> Code Style -> Typescript -> Wrapping and Braces
+> Comments -> Align inline comments
 
 ## 杂项
 ### 忽略索引文件
@@ -65,4 +68,5 @@ phpstorm.exe.vmoptions
 -Dawt.usesystemAAFontSettings=lcd 
 -Dawt.java2d.opengl=true 
 ```
-* phpstorm 默认的 JAVA 环境没有利用机器的硬件加速技术去实现实时渲染.而只要在 JAVA 环境中让系统默认使用硬件加速，就可以解决占用系统资源过大，让 phpstorm 卡的问题了
+* phpstorm 默认的 JAVA 环境没有利用机器的硬件加速技术去实现实时渲染.
+* 只要在 JAVA 环境中让系统默认使用硬件加速，就可以解决占用系统资源过大，phpstorm 卡的问题了

@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "shell-grep"
-categories: grep
-tags: shell grep
+categories: shell
+tags: grep
 ---
 
 * content

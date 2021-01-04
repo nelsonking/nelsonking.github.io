@@ -2,7 +2,7 @@
 layout: post
 title:  "shell—sleep"
 categories: shell
-tags: shell sleep
+tags: sleep
 ---
 
 * content
@@ -30,4 +30,3 @@ nohup /opt/apache-tomcat-7.0.94/bin/startup.sh &
 ```
 
 
- 
