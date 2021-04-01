@@ -33,4 +33,7 @@ make clean
 ./configure --prefix=/usr/local/python3
 
 make && make install
+
+ln -s /usr/local/python3/bin/pip3 /usr/local/bin/
+ln -s /usr/local/python3/bin/python3 /usr/local/bin/
 ```
