@@ -37,8 +37,7 @@ tags: Chrome
     var url = "https://clients2.google.com/service/update2/crx?response=redirect&os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=chromecrx&prodchannel=&prodversion=77.0.3865.90&lang=zh-CN&acceptformat=crx2,crx3&x=id%3D{application_id}%26installsource%3Dondemand%26uc"
     
     if (window.location.href.match("chrome.google.com")) {
-        var hrefMsg =  window.location.href.split("?")[0].split("/")
-        var applicationId = hrefMsg[(hrefMsg.length)-1]
+        var applicationId = window.location.href.match(/\w{32}/g)[0]
     } else {
         var applicationId = prompt("当前页面不是Chome商店页面，请输入应用ID")
     }
